@@ -20,25 +20,3 @@ jobs:
 
       - name: Run tests
         run: npm test
-
-      - name: Test success
-        uses: rjstone/discord-webhook-notify@v1
-        if: success()
-        with:
-          severity: info
-          username: Dizkids-Front
-          color: '#00ff77'
-          avatarUrl: https://icons-for-free.com/download-icon-complete+done+green+success+valid+icon-1320183462969251652_512.png
-          details: Test succeeded.
-          webhookUrl: ${{ secrets. }}
-
-      - name: Test failed
-        uses: rjstone/discord-webhook-notify@v1
-        if: failure()
-        with:
-          severity: error
-          username: AvocaDev-Front
-          color: '#ff0000'
-          avatarUrl: https://icon-library.com/images/failed-icon/failed-icon-7.jpg
-          details: Test failed.
-          webhookUrl: ${{ secrets. }}
