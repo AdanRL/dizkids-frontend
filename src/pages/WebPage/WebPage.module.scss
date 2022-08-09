@@ -1,0 +1,70 @@
+.firstSection {
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	& .firstColor {
+		position: absolute;
+		top: -350px;
+		width: 600px;
+		height: 600px;
+		background: #ff359b;
+		filter: blur(150px);
+	}
+
+	& .secondColor {
+		position: absolute;
+		bottom: -150px;
+		left: 100px;
+		width: 500px;
+		height: 500px;
+		background: #fffd87;
+		filter: blur(150px);
+		z-index: -5;
+	}
+
+	& .thirdColor {
+		position: absolute;
+		bottom: 50px;
+		right: 100px;
+		width: 300px;
+		height: 300px;
+		background: #00d2ff;
+		filter: blur(150px);
+		z-index: -5;
+	}
+
+	& .container {
+		width: 400px;
+		min-height: 400px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	& .title {
+		position: relative;
+		font-family: "Bold-italic";
+		background: -webkit-linear-gradient(left top, #9203c3, #f6b433);
+		background: linear-gradient(to bottom right, #9203c3, #f6b433);
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-stroke: 1px #9203c3ff;
+		color: transparent;
+		font-size: 40px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		margin-bottom: 40px;
+	}
+}
+
+.secondSection {
+	height: 150px;
+	width: 100%;
+	background: #3c2846;
+	z-index: 1;
+}

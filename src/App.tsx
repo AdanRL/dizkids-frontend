@@ -1,10 +1,6 @@
-import "./App.css";
+import { WebPage } from "./pages/WebPage/WebPage";
 
 function App() {
-	return (
-		<div className="App">
-			<div>hello</div>
-		</div>
-	);
+	return <WebPage />;
 }
 export default App;
