@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Button } from "@mui/material";
 
 import styles from "./WebPage.module.scss";
+import { MarketingCard } from "../../components/MarketingCard/MarketingCard";
 
 export const WebPage: FC = () => {
 	return (
@@ -20,7 +21,29 @@ export const WebPage: FC = () => {
 					</Button>
 				</div>
 			</section>
-			<section className={styles.secondSection}></section>
+			<section className={styles.secondSection}>
+				<MarketingCard
+					firstColor="#ff2ae0"
+					secondColor="#645bf6"
+					title="Avalado por profesionales"
+					icon="card1"
+					info="Miles de profesionales del sector utilizan nuestra aplicación como herramienta alternativa con sus pacientes."
+				/>
+				<MarketingCard
+					firstColor="#ffec61"
+					secondColor="#f321d7"
+					title="Juegos con RA"
+					icon="card2"
+					info="Utilizamos la tecnología de la Realidad Aumentada para el tratamiento de la dislalia mediante divertidos juegos utilizando la lengua, boca, voz, etc."
+				/>
+				<MarketingCard
+					firstColor="#24ff72"
+					secondColor="#9a4eff"
+					title="Accesible"
+					icon="card3"
+					info="Fácil e intuitiva de usar. Apostamos por la sencillez y lo minimalista."
+				/>
+			</section>
 		</div>
 	);
 };
