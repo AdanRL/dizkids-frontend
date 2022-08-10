@@ -44,6 +44,17 @@ export const WebPage: FC = () => {
 					info="Fácil e intuitiva de usar. Apostamos por la sencillez y lo minimalista."
 				/>
 			</section>
+			<section className={styles.thirdSection}>
+				<div className={styles.image}>
+					<img src="/assets/profesionales.jpeg" alt="Logopeda" />
+				</div>
+				<div className={styles.recluit}>
+					<h3>¿Quieres formar parte de nuestro equipo?</h3>
+					<Button variant="contained" color="secondary" size="large">
+						Contactanos
+					</Button>
+				</div>
+			</section>
 		</div>
 	);
 };
