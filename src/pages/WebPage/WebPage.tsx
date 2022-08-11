@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 import styles from "./WebPage.module.scss";
 import { MarketingCard } from "../../components/MarketingCard/MarketingCard";
@@ -16,7 +17,13 @@ export const WebPage: FC = () => {
 					<h2 className={styles.subTitle}>
 						Atención personalizada para el tratamiento de la dislalia
 					</h2>
-					<Button variant="contained" color="secondary" size="large">
+					<Button
+						variant="contained"
+						color="secondary"
+						size="large"
+						component={Link}
+						to="/login"
+					>
 						Iniciar sesión
 					</Button>
 				</div>
