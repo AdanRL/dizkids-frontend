@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-
+import { BrowserRouter } from "react-router-dom";
 import { WebPage } from "./WebPage";
 
 export default {
@@ -8,7 +8,9 @@ export default {
 } as ComponentMeta<typeof WebPage>;
 
 const Template: ComponentStory<typeof WebPage> = (args) => (
-	<WebPage {...args} />
+	<BrowserRouter>
+		<WebPage {...args} />
+	</BrowserRouter>
 );
 
 export const main = Template.bind({});
