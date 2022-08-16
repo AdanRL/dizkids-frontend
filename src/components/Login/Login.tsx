@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
@@ -13,9 +13,8 @@ export const Login: FC = () => {
 	const submitData = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const response = await login();
-
 		dispatch(addLoginInfo(response));
-		navigate("/", { replace: true });
+		navigate("/home", { replace: true });
 	};
 	return (
 		<div className={styles.box}>
