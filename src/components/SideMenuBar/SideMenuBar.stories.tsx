@@ -2,17 +2,17 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { store } from "../../store/store";
-import { LoginPage } from "./LoginPage";
+import { SideMenuBar } from "./SideMenuBar";
 
 export default {
-	title: "Pages/LoginPage",
-	component: LoginPage,
-} as ComponentMeta<typeof LoginPage>;
+	title: "components/SideMenuBar",
+	component: SideMenuBar,
+} as ComponentMeta<typeof SideMenuBar>;
 
-const Template: ComponentStory<typeof LoginPage> = (args) => (
+const Template: ComponentStory<typeof SideMenuBar> = (args) => (
 	<BrowserRouter>
 		<Provider store={store}>
-			<LoginPage {...args} />
+			<SideMenuBar {...args} />
 		</Provider>
 	</BrowserRouter>
 );

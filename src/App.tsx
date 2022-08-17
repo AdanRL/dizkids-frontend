@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 
 import { store } from "./store/store";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { PatientListPage } from "./pages/PatientListPage/PatientListPage";
 function App() {
 	return (
 		<Provider store={store}>
@@ -11,6 +12,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<WebPage />} />
 					<Route path="/login" element={<LoginPage />} />
+					<Route path="/home" element={<PatientListPage />} />
 				</Routes>
 			</BrowserRouter>
 		</Provider>

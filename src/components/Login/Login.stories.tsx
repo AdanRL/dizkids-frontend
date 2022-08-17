@@ -1,15 +1,19 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { BrowserRouter } from "react-router-dom";
 import { Login } from "./Login";
+import { Provider } from "react-redux";
+import { store } from "../../store/store";
 
 export default {
-	title: "Pages/Login Form",
+	title: "components/Login Form",
 	component: Login,
 } as ComponentMeta<typeof Login>;
 
 const Template: ComponentStory<typeof Login> = (args) => (
 	<BrowserRouter>
-		<Login {...args} />
+		<Provider store={store}>
+			<Login {...args} />
+		</Provider>
 	</BrowserRouter>
 );
 
