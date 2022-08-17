@@ -26,6 +26,10 @@ export const SideMenuBar: FC = () => {
 		setActiveOption(3);
 	};
 
+	const resetActive = () => {
+		setActiveOption(0);
+	};
+
 	const handleOpen = () => {
 		open ? setOpen(false) : setOpen(true);
 		console.log(open);
@@ -37,7 +41,11 @@ export const SideMenuBar: FC = () => {
 				<Close className={styles.menuIcon} />
 			</div>
 			<ul className={styles.options}>
-				<li className={styles.list} onMouseOver={homeActive}>
+				<li
+					className={styles.list}
+					onMouseOver={homeActive}
+					onMouseLeave={resetActive}
+				>
 					<Link className={styles.link} to="#">
 						{activeOption === 1 ? (
 							<span
@@ -51,10 +59,14 @@ export const SideMenuBar: FC = () => {
 								<HomeOutlined fontSize="large" />
 							</span>
 						)}
-						<span>Principal</span>
+						<span className={styles.text}>Principal</span>
 					</Link>
 				</li>
-				<li className={styles.list} onMouseOver={settingsActive}>
+				<li
+					className={styles.list}
+					onMouseOver={settingsActive}
+					onMouseLeave={resetActive}
+				>
 					<Link className={styles.link} to="#">
 						{activeOption === 2 ? (
 							<span
@@ -68,10 +80,14 @@ export const SideMenuBar: FC = () => {
 								<SettingsOutlined fontSize="large" />
 							</span>
 						)}
-						<span>Mis datos</span>
+						<span className={styles.text}>Mis datos</span>
 					</Link>
 				</li>
-				<li className={styles.list} onMouseOver={calendarActive}>
+				<li
+					className={styles.list}
+					onMouseOver={calendarActive}
+					onMouseLeave={resetActive}
+				>
 					<Link className={styles.link} to="#">
 						{activeOption === 3 ? (
 							<span
@@ -85,7 +101,7 @@ export const SideMenuBar: FC = () => {
 								<CalendarMonthOutlined fontSize="large" />
 							</span>
 						)}
-						<span>Calendario</span>
+						<span className={styles.text}>Calendario</span>
 					</Link>
 				</li>
 			</ul>
@@ -96,12 +112,20 @@ export const SideMenuBar: FC = () => {
 				<Menu className={styles.menuIcon} />
 			</div>
 			<ul className={styles.options}>
-				<li className={styles.list} onMouseOver={homeActive}>
+				<li
+					className={styles.list}
+					onMouseOver={homeActive}
+					onMouseLeave={resetActive}
+				>
 					<Link className={styles.link} to="#">
 						{activeOption === 1 ? (
 							<span
 								className={styles.icon}
-								style={{ background: "#2196f3", color: "white" }}
+								style={{
+									background: "#2196f3",
+									color: "white",
+									transform: "translateX(30px)",
+								}}
 							>
 								<HomeOutlined fontSize="large" />
 							</span>
@@ -112,12 +136,20 @@ export const SideMenuBar: FC = () => {
 						)}
 					</Link>
 				</li>
-				<li className={styles.list} onMouseOver={settingsActive}>
+				<li
+					className={styles.list}
+					onMouseOver={settingsActive}
+					onMouseLeave={resetActive}
+				>
 					<Link className={styles.link} to="#">
 						{activeOption === 2 ? (
 							<span
 								className={styles.icon}
-								style={{ background: "#b145e9", color: "white" }}
+								style={{
+									background: "#b145e9",
+									color: "white",
+									transform: "translateX(30px)",
+								}}
 							>
 								<SettingsOutlined fontSize="large" />
 							</span>
@@ -128,12 +160,20 @@ export const SideMenuBar: FC = () => {
 						)}
 					</Link>
 				</li>
-				<li className={styles.list} onMouseOver={calendarActive}>
+				<li
+					className={styles.list}
+					onMouseOver={calendarActive}
+					onMouseLeave={resetActive}
+				>
 					<Link className={styles.link} to="#">
 						{activeOption === 3 ? (
 							<span
 								className={styles.icon}
-								style={{ background: "green", color: "white" }}
+								style={{
+									background: "green",
+									color: "white",
+									transform: "translateX(30px)",
+								}}
 							>
 								<CalendarMonthOutlined fontSize="large" />
 							</span>
