@@ -1,0 +1,27 @@
+{
+	"patientList": [
+		{
+			"id": "3482002",
+			"email": "JuanMa@email.com",
+			"name": "Juan Manuel Garcia",
+			"phone": "6492341242",
+			"photo": "https://randomuser.me/api/portraits/men/1.jpg",
+			"dislaliaTypes": [
+				{
+					"type": "Sigmatismo",
+					"level": "intermedio"
+				},
+				{
+					"type": "Jotacismo",
+					"level": "básico"
+				}
+			],
+			"activities": [
+				{
+					"date": "10/09/2021",
+					"games": ["Feliz Cumpleaños", "Karaoke", "Laberinto"]
+				}
+			]
+		}
+	]
+}
