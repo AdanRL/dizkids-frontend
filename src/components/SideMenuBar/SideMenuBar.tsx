@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import {
 	Menu,
 	Close,
-	HomeOutlined,
-	SettingsOutlined,
-	CalendarMonthOutlined,
+	ListAltOutlined,
+	PersonAddAlt1Outlined,
+	LogoutOutlined,
 } from "@mui/icons-material";
 
 import styles from "./SideMenuBar.module.scss";
@@ -14,15 +14,15 @@ export const SideMenuBar: FC = () => {
 	const [open, setOpen] = useState(false);
 	const [activeOption, setActiveOption] = useState(0);
 
-	const homeActive = () => {
+	const listActive = () => {
 		setActiveOption(1);
 	};
 
-	const settingsActive = () => {
+	const addPatientActive = () => {
 		setActiveOption(2);
 	};
 
-	const calendarActive = () => {
+	const logoutActive = () => {
 		setActiveOption(3);
 	};
 
@@ -43,7 +43,7 @@ export const SideMenuBar: FC = () => {
 			<ul className={styles.options}>
 				<li
 					className={styles.list}
-					onMouseOver={homeActive}
+					onMouseOver={listActive}
 					onMouseLeave={resetActive}
 				>
 					<Link className={styles.link} to="/home">
@@ -52,11 +52,11 @@ export const SideMenuBar: FC = () => {
 								className={styles.icon}
 								style={{ background: "#2196f3", color: "white" }}
 							>
-								<HomeOutlined fontSize="large" />
+								<ListAltOutlined fontSize="large" />
 							</span>
 						) : (
 							<span className={styles.icon}>
-								<HomeOutlined fontSize="large" />
+								<ListAltOutlined fontSize="large" />
 							</span>
 						)}
 						<span className={styles.text}>Mis Pacientes</span>
@@ -64,7 +64,7 @@ export const SideMenuBar: FC = () => {
 				</li>
 				<li
 					className={styles.list}
-					onMouseOver={settingsActive}
+					onMouseOver={addPatientActive}
 					onMouseLeave={resetActive}
 				>
 					<Link className={styles.link} to="#">
@@ -73,11 +73,11 @@ export const SideMenuBar: FC = () => {
 								className={styles.icon}
 								style={{ background: "#b145e9", color: "white" }}
 							>
-								<SettingsOutlined fontSize="large" />
+								<PersonAddAlt1Outlined fontSize="large" />
 							</span>
 						) : (
 							<span className={styles.icon}>
-								<SettingsOutlined fontSize="large" />
+								<PersonAddAlt1Outlined fontSize="large" />
 							</span>
 						)}
 						<span className={styles.text}>Agregar Paciente</span>
@@ -85,7 +85,7 @@ export const SideMenuBar: FC = () => {
 				</li>
 				<li
 					className={styles.list}
-					onMouseOver={calendarActive}
+					onMouseOver={logoutActive}
 					onMouseLeave={resetActive}
 				>
 					<Link className={styles.link} to="#">
@@ -94,11 +94,11 @@ export const SideMenuBar: FC = () => {
 								className={styles.icon}
 								style={{ background: "green", color: "white" }}
 							>
-								<CalendarMonthOutlined fontSize="large" />
+								<LogoutOutlined fontSize="large" />
 							</span>
 						) : (
 							<span className={styles.icon}>
-								<CalendarMonthOutlined fontSize="large" />
+								<LogoutOutlined fontSize="large" />
 							</span>
 						)}
 						<span className={styles.text}>Salir</span>
@@ -114,7 +114,7 @@ export const SideMenuBar: FC = () => {
 			<ul className={styles.options}>
 				<li
 					className={styles.list}
-					onMouseOver={homeActive}
+					onMouseOver={listActive}
 					onMouseLeave={resetActive}
 				>
 					<Link className={styles.link} to="#">
@@ -127,18 +127,18 @@ export const SideMenuBar: FC = () => {
 									transform: "translateX(30px)",
 								}}
 							>
-								<HomeOutlined fontSize="large" />
+								<ListAltOutlined fontSize="large" />
 							</span>
 						) : (
 							<span className={styles.icon}>
-								<HomeOutlined fontSize="large" />
+								<ListAltOutlined fontSize="large" />
 							</span>
 						)}
 					</Link>
 				</li>
 				<li
 					className={styles.list}
-					onMouseOver={settingsActive}
+					onMouseOver={addPatientActive}
 					onMouseLeave={resetActive}
 				>
 					<Link className={styles.link} to="#">
@@ -151,18 +151,18 @@ export const SideMenuBar: FC = () => {
 									transform: "translateX(30px)",
 								}}
 							>
-								<SettingsOutlined fontSize="large" />
+								<PersonAddAlt1Outlined fontSize="large" />
 							</span>
 						) : (
 							<span className={styles.icon}>
-								<SettingsOutlined fontSize="large" />
+								<PersonAddAlt1Outlined fontSize="large" />
 							</span>
 						)}
 					</Link>
 				</li>
 				<li
 					className={styles.list}
-					onMouseOver={calendarActive}
+					onMouseOver={logoutActive}
 					onMouseLeave={resetActive}
 				>
 					<Link className={styles.link} to="#">
@@ -175,11 +175,11 @@ export const SideMenuBar: FC = () => {
 									transform: "translateX(30px)",
 								}}
 							>
-								<CalendarMonthOutlined fontSize="large" />
+								<LogoutOutlined fontSize="large" />
 							</span>
 						) : (
 							<span className={styles.icon}>
-								<CalendarMonthOutlined fontSize="large" />
+								<LogoutOutlined fontSize="large" />
 							</span>
 						)}
 					</Link>
