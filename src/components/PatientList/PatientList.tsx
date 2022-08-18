@@ -17,6 +17,7 @@ export const PatientList: FC = () => {
 		],
 	});
 
+	const cards: any = [];
 	useEffect(() => {
 		// eslint-disable-next-line space-before-function-paren
 		const loadData = async () => {
@@ -25,9 +26,24 @@ export const PatientList: FC = () => {
 		};
 		loadData();
 	}, []);
+
+	patients.patientList.forEach((patient) => {
+		console.log(patient);
+		cards.push(
+			<div className={styles.list}>
+				<div className={styles.imgContainer}>
+					<img src={patient.photo} alt="" />
+				</div>
+				<div className={styles.content}>
+					<h4>{patient.name}</h4>
+				</div>
+			</div>
+		);
+	});
 	return (
-		<div>
-			<div>Hello</div>
+		<div className={styles.container}>
+			<h3 className={styles.title}>Mis Pacientes</h3>
+			<div className={styles.listContainer}>{cards}</div>
 		</div>
 	);
 };

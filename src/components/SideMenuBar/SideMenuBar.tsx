@@ -46,7 +46,7 @@ export const SideMenuBar: FC = () => {
 					onMouseOver={homeActive}
 					onMouseLeave={resetActive}
 				>
-					<Link className={styles.link} to="#">
+					<Link className={styles.link} to="/home">
 						{activeOption === 1 ? (
 							<span
 								className={styles.icon}
@@ -59,7 +59,7 @@ export const SideMenuBar: FC = () => {
 								<HomeOutlined fontSize="large" />
 							</span>
 						)}
-						<span className={styles.text}>Principal</span>
+						<span className={styles.text}>Mis Pacientes</span>
 					</Link>
 				</li>
 				<li
@@ -80,7 +80,7 @@ export const SideMenuBar: FC = () => {
 								<SettingsOutlined fontSize="large" />
 							</span>
 						)}
-						<span className={styles.text}>Mis datos</span>
+						<span className={styles.text}>Agregar Paciente</span>
 					</Link>
 				</li>
 				<li
@@ -101,7 +101,7 @@ export const SideMenuBar: FC = () => {
 								<CalendarMonthOutlined fontSize="large" />
 							</span>
 						)}
-						<span className={styles.text}>Calendario</span>
+						<span className={styles.text}>Salir</span>
 					</Link>
 				</li>
 			</ul>
