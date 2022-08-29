@@ -17,7 +17,19 @@ export const login = async () => {
 export const getPatientList = async () => {
 	try {
 		const response = await axios.get(
-			"https://tfg-dizkid-api.app.smartmock.io/api/user/3472001"
+			"https://tfg-dizkid-api.app.smartmock.io/api/user/3472001/patientList"
+		);
+		return response.data;
+	} catch (err) {
+		return "error";
+	}
+};
+
+// eslint-disable-next-line space-before-function-paren
+export const putPatientList = async () => {
+	try {
+		const response = await axios.put(
+			"https://tfg-dizkid-api.app.smartmock.io/api/user/3472001/patientList"
 		);
 		return response.data;
 	} catch (err) {
