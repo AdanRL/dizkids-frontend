@@ -31,7 +31,7 @@ export const putPatientList = async () => {
 		const response = await axios.put(
 			"https://tfg-dizkid-api.app.smartmock.io/api/user/3472001/patientList"
 		);
-		return response.data;
+		return [response.data, response.status];
 	} catch (err) {
 		return "error";
 	}
