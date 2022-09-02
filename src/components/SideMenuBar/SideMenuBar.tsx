@@ -177,7 +177,7 @@ export const SideMenuBar: FC = () => {
 					onMouseOver={logoutActive}
 					onMouseLeave={resetActive}
 				>
-					<Link className={styles.link} to="#">
+					<Link className={styles.link} to="/">
 						{activeOption === 3 ? (
 							<span
 								className={styles.icon}

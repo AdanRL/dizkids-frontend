@@ -36,3 +36,15 @@ export const putPatientList = async () => {
 		return "error";
 	}
 };
+
+// eslint-disable-next-line space-before-function-paren
+export const getPatientDetails = async () => {
+	try {
+		const response = await axios.get(
+			"https://tfg-dizkid-api.app.smartmock.io/api/patient/3482002/details"
+		);
+		return [response.data, response.status];
+	} catch (err) {
+		return "error";
+	}
+};
