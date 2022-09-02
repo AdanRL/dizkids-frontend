@@ -1,5 +1,7 @@
 import { FC, useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { changeActive } from "../../store/slices/ActiveComponent/slice";
 import {
 	Menu,
 	Close,
@@ -11,6 +13,7 @@ import {
 import styles from "./SideMenuBar.module.scss";
 
 export const SideMenuBar: FC = () => {
+	const dispatch = useDispatch();
 	const [open, setOpen] = useState(false);
 	const [activeOption, setActiveOption] = useState(0);
 
@@ -29,10 +32,16 @@ export const SideMenuBar: FC = () => {
 	const resetActive = () => {
 		setActiveOption(0);
 	};
+	const changeToAdd = () => {
+		dispatch(changeActive("new"));
+	};
+
+	const changeToList = () => {
+		dispatch(changeActive("list"));
+	};
 
 	const handleOpen = () => {
 		open ? setOpen(false) : setOpen(true);
-		console.log(open);
 	};
 
 	return open ? (
@@ -87,6 +96,7 @@ export const SideMenuBar: FC = () => {
 					className={styles.list}
 					onMouseOver={logoutActive}
 					onMouseLeave={resetActive}
+					onClick={changeToAdd}
 				>
 					<Link className={styles.link} to="#">
 						{activeOption === 3 ? (
@@ -116,6 +126,7 @@ export const SideMenuBar: FC = () => {
 					className={styles.list}
 					onMouseOver={listActive}
 					onMouseLeave={resetActive}
+					onClick={changeToList}
 				>
 					<Link className={styles.link} to="#">
 						{activeOption === 1 ? (
@@ -140,6 +151,7 @@ export const SideMenuBar: FC = () => {
 					className={styles.list}
 					onMouseOver={addPatientActive}
 					onMouseLeave={resetActive}
+					onClick={changeToAdd}
 				>
 					<Link className={styles.link} to="#">
 						{activeOption === 2 ? (
@@ -165,7 +177,7 @@ export const SideMenuBar: FC = () => {
 					onMouseOver={logoutActive}
 					onMouseLeave={resetActive}
 				>
-					<Link className={styles.link} to="#">
+					<Link className={styles.link} to="/">
 						{activeOption === 3 ? (
 							<span
 								className={styles.icon}
